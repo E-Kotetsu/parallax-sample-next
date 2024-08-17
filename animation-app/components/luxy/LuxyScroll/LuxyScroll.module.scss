@@ -1,0 +1,21 @@
+.section-inner {
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+}
+.figure-container {
+    display: flex;
+    gap: 30px;
+    &__image {
+        width: 500px;
+        height: 300px;
+        display: inline-block;
+        border-radius: 8px; /* 角を丸くしたい場合 */
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), /* 外側の光 */
+                    0 0 20px rgba(255, 255, 255, 0.5);  /* 内側の光 */
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    &__caption {
+        color: #FFFFFF;
+    }
+}

@@ -1,6 +1,7 @@
+import styles from './Header.module.scss';
 const Header: React.FC = () => {
     return(
-        <header>Header</header>
+        <header className={styles['header']}>Header</header>
     )
 }
 

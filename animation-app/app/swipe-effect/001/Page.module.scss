@@ -1,0 +1,34 @@
+.scroll-container {
+    height: 400vh;
+    // overflow-y: scroll;
+    // scroll-snap-type: y mandatory;
+}
+.section {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    // scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.5s ease-in-out;
+    &-01 {
+        background-color: #FDD9D9;
+        background-image: url("/img/swipe-effect/001/bg-spring.jpg");
+    }
+    &-02 {
+        background-color: #A2D7DD;
+        background-image: url("/img/swipe-effect/001/bg-summer.jpg");
+    }
+    &-03 {
+        background-color: #DE6A1C;
+        background-image: url("/img/swipe-effect/001/bg-autumn.jpg");
+    }
+    &-04 {
+        background-color: #D5C752;
+        background-image: url("/img/swipe-effect/001/bg-winter.jpg");
+    }
+}
+
