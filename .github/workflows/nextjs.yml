@@ -75,8 +75,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        working-directory: ./animation-app
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        working-directory: ./animation-app
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -93,3 +95,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          publish_dir: ./animation-app/out
