@@ -44,12 +44,12 @@ jobs:
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+            echo "Detected package manager: npm" # デバッグ出力
             exit 0
           else
             echo "Unable to determine package manager"
             exit 1
           fi
-          echo ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
