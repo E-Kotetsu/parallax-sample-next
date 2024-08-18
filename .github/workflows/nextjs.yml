@@ -65,11 +65,10 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v4
         with:
-          path: |
-            animation-app/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/animation-app/package-lock.json', '**/animation-app/yarn.lock') }}-${{ hashFiles('**/animation-app/**.[jt]s', '**/animation-app/**.[jt]sx') }}
+          path: animation-app/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('animation-app/**/package-lock.json', 'animation-app/**/yarn.lock') }}-${{ hashFiles('animation-app/**.[jt]s', 'animation-app/**.[jt]sx') }} # **修正: pathを`animation-app`に設定**
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/animation-app/package-lock.json', '**/animation-app/yarn.lock') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('animation-app/**/package-lock.json', 'animation-app/**/yarn.lock') }}- # **修正: pathを`animation-app`に設定**
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
