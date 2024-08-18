@@ -68,6 +68,9 @@ $color-text-winter: #666699;
     letter-spacing: 1em;
     text-align: center;
     text-shadow: 4px 0px 3px rgba(255, 255, 255, 0.8);
+    @include m.sp {
+        font-size: 24px;
+    }
 
     .title-text {
         &-spring {
@@ -135,13 +138,9 @@ $color-text-winter: #666699;
 
 .bg-inner {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     max-width: 900px;
     margin-inline: auto;
-
-    @include m.sp {
-        height: auto;
-    }
 }
 
 .bg-layer {
@@ -162,10 +161,14 @@ $color-text-winter: #666699;
     font-family: "Libre Baskerville", serif;
 
     &__title {
+        color: #FFFFFF;
         font-size: 42px;
         letter-spacing: 0.2em;
         text-indent: 0.2em;
         text-shadow: 4px 0px 3px rgba(0, 0, 0, 0.3);
+        @include m.sp {
+            font-size: 30px;
+        }
     }
 
     &__scroll-down {
@@ -173,6 +176,10 @@ $color-text-winter: #666699;
         left: 50%;
         bottom: 0;
         height: 90px;
+        @include m.sp {
+            height: 0;
+            bottom: -20px;
+        }
 
         &::after {
             content: "";
@@ -199,26 +206,39 @@ $color-text-winter: #666699;
 .content {
     height: 100%;
     padding: 20vh 40px;
+    color: #FFFFFF;
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    @include m.sp {
+        padding: 16px;
+    }
 
     &__title {
         font-size: 36px;
         font-weight: 700;
+        @include m.sp {
+            font-size: 28px;
+        }
     }
 
     &__subtitle {
         font-size: 28px;
         margin-top: 30px;
         font-weight: 400;
+        @include m.sp {
+            font-size: 20px;
+        }
     }
 
     &__paragraph {
         font-size: 20px;
         margin-top: 20px;
         line-height: 1.7;
+        @include m.sp {
+            font-size: 16px;
+        }
 
         &+& {
             margin-top: 16px;
