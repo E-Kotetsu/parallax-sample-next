@@ -43,7 +43,7 @@ const PageSample001: React.FC = () => {
                             trigger: elm,
                             start: 'top 80%',
                             end: 'top 0',
-                            toggleActions: "play reset restart none",
+                            toggleActions: 'play reset restart none',
                             // markers: true,
                         },
                     }
@@ -168,7 +168,7 @@ const PageSample001: React.FC = () => {
                             The winter night sky is clear, with stars shining more brilliantly than ever. The sight of the night sky, or snowflakes dancing in the air, creates a magical and captivating scene. Winter also brings a longing for the warmth of a fireplace and hearty meals.
                         </p>
                         <p className={styles['content__paragraph']}>
-                            This season is also a time for spending more time with family and friends. The celebrations of Christmas and New Year's bring warmth to everyone’s hearts, filling the season with smiles. The warmth shared among people during the cold of winter fills our hearts with joy.
+                            This season is also a time for spending more time with family and friends. The celebrations of Christmas and New Year&apos;s bring warmth to everyone&apos;s hearts, filling the season with smiles. The warmth shared among people during the cold of winter fills our hearts with joy.
                         </p>
                     </div>
                 </div>
